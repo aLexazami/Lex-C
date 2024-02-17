@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #323232;
+    color: #fff;
+}
+.container{
+    padding:10px 10%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width:150px;
+    height:70px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/*------------------Services--------------------*/
+#projects{
+    padding: 80px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project-image img{
+    width:200px;
+    height:200px;
+}
+.project-image{
+    margin-top: 50px;
+    padding:10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+#image1{
+    grid-column:2/span 3;
+    
+}
+#image2{
+    grid-column: 3/ span 4;
+}
+#image3{
+    grid-column: 2/ span 3;
+}
+#image4{
+    grid-column:2/span 3;
+}
+#image5{
+    grid-column: 1/ span 5;
+}
+#image6{
+    grid-column: 2/ span 3;
+}
+.header-text{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left:30%;
+    top:60%;
+    height:14.37em;
+    width:28.12em;
+    cursor:pointer;
+}
+.header-text span{
+    color: #ff004f;
+}
+.header-text h1{
+    background-color: #323232;
+    position: absolute;
+    font-size: 9.37em;
+    text-align: center;
+    left:50%;
+    top:50%;
+}
+.header-text h2{
+    font-size: 2.5em;
+    position: absolute;
+    width:100%;
+    transform: translateY(-50%);
+    top:90%;
+    left:60%;
+    text-align: center;
+}
+.header-text:hover h1:nth-child(2){
+    clip-path: polygon(0 0,100% 0,100% 50%,0 50%);
+    transform: translateY(-50%);
+    transition: 0.9s;
+}
+.header-text:hover h1:nth-child(3){
+    clip-path: polygon(0 50%,100% 50%,100% 100%,0 100%);
+    transform: translateY(50%);
+    transition: 0.9s;
+}
+
+/*------------------Project-Photo--------------------*/
+.proj-col-1{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 55px;
+    margin:20px 50px 40px;
+}
+.proj-wrap{
+    width:300px;
+    border: 1px solid #ff004f;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 100px;
+}
+.proj-wrap img{
+    width:100%;
+    height:auto;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 100px;
+}
+.proj-wrap .text-wrap{
+    text-align: center;
+}
+.proj-wrap .text-wrap h1{
+    padding: 30px;
+}
+.proj-wrap{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.proj-wrap:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff004f;
+    border: 3px solid #ff004f;
+}
+/*------------------Photoshoot--------------------*/
+#projects-title{
+    display: flex;
+    margin:20px 0 40px;
+}
+.photoshoot-container{
+    max-width:1200px;
+    width:95%;
+    margin-left: 50px;
+}
+.photoshoot-slider{
+    position: relative;
+}
+.photoshoot-slider h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.photoshoot-slider .slide-button{
+    position: absolute;
+    top:45%;
+    height:50px;
+    width:50px;
+    color: #323232;
+    border: none;
+    outline: none;
+    background: #ff004f;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.photoshoot-slider .slide-button:hover{
+    background: #ff0051b9;
+}
+.photoshoot-slider .slide-button#prev-slide{
+    left:-20px;
+    display: none;
+}
+.photoshoot-slider .slide-button#next-slide{
+    right:20px;
+}
+.photoshoot-slider .photoshoot-list{
+    display: grid;
+    gap:18px;
+    margin-bottom: 30px;
+    overflow-x:auto;
+    scrollbar-width: none;
+    grid-template-columns: repeat(10,1fr);
+}
+.photoshoot-slider .photoshoot-list::-webkit-scrollbar{
+    display: none;
+}
+.photoshoot-list img{
+    width:305px;
+    height:400px;
+    object-fit: cover;
+    text-align: center;
+    text-decoration: none;
+    color:#fff;
+}
+.photoshoot-list a{
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.photoshoot-list a:hover{
+    transform: scale(1.1);
+}
+.photoshoot-container .slider-scrollbar{
+    height:24px;
+    width:100%;
+    display:flex;
+    align-items:center;
+}
+.slider-scrollbar .scrollbar-track{
+    height:2px;
+    width:100%;
+    background: #323232;
+    position: relative;
+    border-radius: 4px;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height:4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height:100%;
+    width:50%;
+    background: #ff004f;
+    border-radius: inherit;
+    cursor:grab;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor:grabbing;
+    height:8px;
+    top:-2px;
+}
+.slider-scrollbar .scrollbar-thumb::after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:-10px;
+    bottom:-10px;
+}
+.gallery-container{
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px 8%;
+}
+.photo-gallery{
+    margin-top: 50px;
+}
+.photo-gallery h1{
+    text-align: center;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:30px;
+}
+.gallery img{
+    width: 100%;
+
+}
+.gallery img:hover{
+    transform: scale(1.1);
+}
+.video-container{
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+.video-container video{
+    padding:30px;
+}
+/*-------------------Style for mobiles and tablets -------------------------------*/
+@media (max-width: 1023px){
+    .photoshoot-slider .slide-button{
+        display: none!important;
+    }
+
+    .photoshoot-slider .photoshoot-list{
+        gap:10px;
+        margin-bottom: 15px;
+    }
+    .photoshoot-list img{
+        width:280px;
+        height:380px;
+    }
+    .slider-scrollbar .scrollbar-thumb{
+        width:20%;
+    }
+}
